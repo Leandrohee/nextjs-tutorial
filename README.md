@@ -31,6 +31,8 @@ Para trocar a porta padrão 3000 para 5200 (porta da minha preferencia) fazer o 
 No nextJs não é necessário instalar a biblioteca react-router para gerenciar as rotas. 
 Com esse framework as rotas funcionam dessa maneira:
 
+https://nextjs.org/docs/app/building-your-application/routing
+
 **TODAS** as rotas são representadas por pastas. Para uma rota funcionar ela deve estar dentro da pasta **src/app**. Caso contrário a rota não funciona.
 Para uma rota ser **dinamica** ela dever ter o nome **[slug]**
 Para uma pasta dentro de src/app **não ser lida como uma rota** ela deve estar entre **parentese**
