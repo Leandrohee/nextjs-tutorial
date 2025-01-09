@@ -1,6 +1,11 @@
+/* ------------------- ESSE ARQUIVO É ONDE FICAM OS COMPONENTES COMUNS DA ROTA ------------------ */
+/* ------------------ A ROTA AQUI É A PRINCIPAL POIS ESTÁ NA RAIZ DA PASTA APP ------------------ */
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className={"main-div"}>
+          <Navbar/>         {/* Arquivo comum para essa rota -  componentes/navbar */}
+          {children}        {/* Arquvio page.tsx na pasta app - rota principal: localhost:5200 */}
+          <Footer/>         {/* Arquivo comum para esta rota componentes/footer */}
+        </div>
       </body>
     </html>
   );

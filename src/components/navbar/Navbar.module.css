@@ -1,0 +1,4 @@
+.navcss{
+    display: flex;
+    justify-content: space-between;
+}

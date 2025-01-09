@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------------------------- VARIAVEIS DE CSS -------------------------------------- */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* ------------ MUDA AS VARIAVEIS DE CSS SE O USUÁRIO TEM PREFERENCIA POR TEMA ESCURO ----------- */
+/* -------------------------- DETECTA A PREFERENCIA ATRAVES  DO BROWSER ------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,8 +17,23 @@
   }
 }
 
+/* -------------------------------------- RESENTANDO O CSS -------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------- CONFIGURAÇOES GLOBAIS - BODY - ------------------------------- */
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-div{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
