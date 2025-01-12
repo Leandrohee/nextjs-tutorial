@@ -1,4 +1,12 @@
 .navcss{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    /* background-color: #fff; */
+}
+
+.logocss{
+    font-size: 30px;
+    font-weight: bold;
 }

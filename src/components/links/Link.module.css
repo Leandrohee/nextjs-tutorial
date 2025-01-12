@@ -1,0 +1,74 @@
+.links{
+    display: flex;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.link{
+    min-width: 100px;
+    text-align: center;
+    border-radius: 30%;
+    padding: 0.4vw;
+}
+
+.linkActivated{
+    background-color: var(--foreground);
+    color: var(--background);
+    min-width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    padding:  0.4vw;
+}
+
+.loginBtn{
+    min-width: 100px;
+    text-align: center;
+    padding: 0.4vw;
+    background-color: rgb(24, 187, 89);
+    color: var(--background);
+}
+
+.logoutBtn{
+    min-width: 100px;
+    text-align: center;
+    padding: 0.4vw;
+    background-color: rgb(201, 18, 18);
+    color: var(--foreground);
+}
+
+.links768,.btn768{
+    display: none;
+}
+
+/* ------------------------------ CSS PARA TELAS MENORES QUE 768PX ------------------------------ */
+@media (max-width: 768px){
+    .links{
+        display: none;
+    }
+
+    .containerMenuIcon{
+        height: fit-content;
+        width: 4vw;
+    }
+
+    .btn768{
+        position: relative;
+        display: flex;
+    }
+
+    .menuActivated{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 5vh;
+        height: calc(100vh - 5vh);
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-tutorial);
+        box-shadow: rgba(236, 235, 235, 0.35) 0px 20px 15px;          /*Set the shadown only in the left*/  
+        z-index: 1;                                                     /*Place the menu over the image*/
+    ;
+    }
+}
