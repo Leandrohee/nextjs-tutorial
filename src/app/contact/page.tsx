@@ -30,11 +30,15 @@ export default function Contact() {
             type="text"
             placeholder="Phone Number (Optional)" 
           />
-          <input
-            className={`${styles.input} ${styles.messageInput}`} 
-            type="text"
-            placeholder="Message" 
-          />
+          <textarea
+            className={styles.messageInput} 
+            name="" 
+            id=""
+            rows={30}
+            cols={10}
+            placeholder="Message"
+          >
+          </textarea>
           <button className={styles.button}>
             Send
           </button>  
