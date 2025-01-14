@@ -4,24 +4,24 @@ import Link from "next/link"
 
 interface PostProps{
     title: string,
-    src: StaticImageData,
+    src: StaticImageData|string,
     description: string,
-    dateImg: string
+    dateImg: string|number,
+    id: number
 }
 
-export default function Post({title,src,description,dateImg}: PostProps) {
+export default function Post({title,src,description,dateImg,id}: PostProps) {
   return (
     <div className={styles.container}>
         <div className={styles.divTop}>
-            <div className={styles.divImage}>
-                <Image className={styles.img} src={src} alt=""/>
-            </div>
+            <Link className={styles.divImage} href={`./blog/${id}`}>
+                <Image className={styles.img} src={src} alt="" width={100} height={100}/>
+            </Link>
             <span className={styles.dateImg}>{dateImg}</span>
         </div>
         <div className={styles.divBottom}>
             <h3 className={styles.h3} >{title}</h3>
             <p className={styles.p}>{description}</p>
-            <Link  className={styles.link} href={"./"}>READ MORE</Link>
         </div>
     </div>
   )
