@@ -3,8 +3,9 @@
 ## Comandos para iniciar o projeto
 
 ```javascript
-npx create-next-app@latest .    //Para startar o projeto. 
 node --version                  //Verificar a versão do node. >20.0
+sudo chown -R $(whoami) ~/.npm  //Autorizar o npm para fazer downloads
+npx create-next-app@latest .    //Para startar o projeto. 
 yarn install || npm install     //Se der erro na instalação
 ```
 
